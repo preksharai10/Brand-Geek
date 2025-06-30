@@ -23,7 +23,7 @@ const Header = () => {
         {/* Logo */}
         <div style={logoStyles}>
           <div style={logoIconStyles}>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
               <circle cx="16" cy="16" r="16" fill="#4ade80" />
               <path d="M12 10h8c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2v-8c0-1.1.9-2 2-2z" fill="white" />
               <circle cx="16" cy="16" r="3" fill="#4ade80" />
@@ -68,7 +68,7 @@ const Header = () => {
 const headerStyles = {
   background: '#00555A',
   color: 'white',
-  padding: '1rem 0',
+  padding: '0.75rem 0',
   position: 'fixed',
   top: 0,
   left: 0,
@@ -80,30 +80,38 @@ const headerStyles = {
 const containerStyles = {
   maxWidth: '1200px',
   margin: '0 auto',
-  padding: '0 20px',
+  padding: '0 16px',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  position: 'relative'
+  position: 'relative',
+  width: '100%',
+  boxSizing: 'border-box'
 };
 
 const logoStyles = {
   display: 'flex',
   alignItems: 'center',
-  gap: '12px'
+  gap: '8px',
+  minWidth: 0, // Allow flex shrinking
+  flex: '1 1 auto'
 };
 
 const logoIconStyles = {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  flexShrink: 0
 };
 
 const logoTextStyles = {
-  fontSize: '1.6rem',
+  fontSize: '1.3rem',
   fontWeight: '700',
   color: 'white',
   margin: 0,
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis'
 };
 
 const navStyles = {
@@ -113,7 +121,7 @@ const navStyles = {
 const navListStyles = {
   display: 'flex',
   listStyle: 'none',
-  gap: '2rem',
+  gap: '1.5rem',
   margin: 0,
   padding: 0,
   alignItems: 'center'
@@ -123,10 +131,11 @@ const navLinkStyles = {
   color: '#e2e8f0',
   textDecoration: 'none',
   fontWeight: '500',
-  fontSize: '1rem',
-  padding: '10px 20px',
+  fontSize: '0.95rem',
+  padding: '8px 16px',
   borderRadius: '8px',
   transition: 'all 0.3s ease',
+  whiteSpace: 'nowrap'
 };
 
 const activeLinkStyle = {
@@ -141,14 +150,15 @@ const mobileMenuButtonStyles = {
   cursor: 'pointer',
   padding: '8px',
   borderRadius: '6px',
-  transition: 'background-color 0.3s ease'
+  transition: 'background-color 0.3s ease',
+  flexShrink: 0
 };
 
 const hamburgerStyles = {
-  width: '24px',
+  width: '22px',
   height: '2px',
   backgroundColor: 'white',
-  margin: '3px 0',
+  margin: '2.5px 0',
   borderRadius: '2px'
 };
 
@@ -163,6 +173,7 @@ const mobileMenuStyles = {
   padding: '1.5rem',
   borderRadius: '0 0 12px 12px',
   boxShadow: '0 8px 25px rgba(0,0,0,0.3)',
+  zIndex: 999
 };
 
 const mobileNavLinkStyles = {
@@ -189,8 +200,37 @@ if (typeof document !== 'undefined') {
       .mobile-menu-btn { display: none !important; }
     }
 
+    @media (max-width: 480px) {
+      header div[style*="maxWidth"] {
+        padding: 0 12px !important;
+      }
+      
+      h2[style*="fontSize"] {
+        font-size: 1.1rem !important;
+      }
+      
+      svg {
+        width: 24px !important;
+        height: 24px !important;
+      }
+    }
+
+    @media (max-width: 375px) {
+      h2[style*="fontSize"] {
+        font-size: 1rem !important;
+      }
+      
+      header div[style*="gap: 8px"] {
+        gap: 6px !important;
+      }
+    }
+
     .mobile-menu-btn:hover {
       background-color: rgba(255,255,255,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
     }
   `;
   document.head.appendChild(style);

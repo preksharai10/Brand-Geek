@@ -28,7 +28,7 @@ const ServicesPage = () => {
         </div>
       </div>
 
-      {/* SEO Section */}
+      {/* SEO Section - Text Left, Image Right */}
       <section id="seo" style={sectionStyles}>
         <div style={containerStyles}>
           <div style={contentGridStyles}>
@@ -64,7 +64,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Social Media Marketing Section */}
+      {/* Social Media Marketing Section - Image Left, Text Right */}
       <section id="social-media" style={sectionStyles}>
         <div style={containerStyles}>
           <div style={contentGridStylesReverse}>
@@ -100,7 +100,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Content Marketing Section */}
+      {/* Content Marketing Section - Text Left, Image Right */}
       <section style={sectionStyles}>
         <div style={containerStyles}>
           <div style={contentGridStyles}>
@@ -135,10 +135,10 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Website Design and Development Section */}
+      {/* Website Design and Development Section - Image Left, Text Right */}
       <section style={sectionStyles}>
         <div style={containerStyles}>
-          <div style={contentRowStyles}>
+          <div style={contentGridStylesReverse}>
             <div style={imageContainerStylesWeb}>
               <img 
                 src="https://brand-geek.com/wp-content/uploads/2025/06/web2.jpg"
@@ -176,7 +176,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Pay-Per-Click Advertising Section */}
+      {/* Pay-Per-Click Advertising Section - Text Left, Image Right */}
       <section style={sectionStyles}>
         <div style={containerStyles}>
           <div style={gridStyles}>
@@ -212,6 +212,69 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Responsive CSS */}
+      <style>{`
+        @media (max-width: 1024px) {
+          /* Tablet styles */
+        }
+        
+        @media (max-width: 768px) {
+          /* Mobile styles - Stack content vertically */
+          .content-grid,
+          .content-grid-reverse,
+          .grid-styles {
+            flex-direction: column !important;
+          }
+          
+          .text-content,
+          .text-content-sm,
+          .text-block,
+          .text-section {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            order: 2 !important;
+            text-align: center !important;
+          }
+          
+          .image-container,
+          .image-container-sm,
+          .image-container-web {
+            order: 1 !important;
+            margin-bottom: 20px !important;
+          }
+          
+          .floating-icons {
+            display: none !important;
+          }
+          
+          .perks-list {
+            padding-left: 20px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          /* Small mobile styles */
+          .container {
+            padding: 0 15px !important;
+          }
+          
+          .section {
+            padding: 40px 0 !important;
+          }
+          
+          .header {
+            padding-top: 100px !important;
+            padding-bottom: 40px !important;
+          }
+          
+          .perks-container,
+          .perks-box,
+          .perks-card {
+            padding: 20px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };
@@ -219,8 +282,8 @@ const ServicesPage = () => {
 // Header Styles - Updated to match second image
 const headerStyles = {
   background: 'linear-gradient(135deg, #0a2e3f 0%, #1a4757 25%, #2a5a6b 50%, #1a4757 75%, #0a2e3f 100%)',
-  paddingTop: '180px',
-  paddingBottom: '60px',
+  paddingTop: 'clamp(100px, 15vw, 180px)',
+  paddingBottom: 'clamp(40px, 8vw, 60px)',
   textAlign: 'center',
   position: 'relative',
   overflow: 'hidden'
@@ -235,29 +298,28 @@ const headerContainerStyles = {
 };
 
 const headerTitleStyles = {
-  fontSize: 'clamp(2rem, 6vw, 3.5rem)',
+  fontSize: 'clamp(1.8rem, 6vw, 3.5rem)',
   fontWeight: '700',
   color: '#ffffff',
   margin: '0 0 20px 0',
   letterSpacing: '-1px'
 };
 
-
 const titleUnderline = {
-  width: '100px',
+  width: 'clamp(60px, 15vw, 100px)',
   height: '4px',
   background: '#4ade80',
   margin: '0 auto',
   borderRadius: '2px'
 };
 
-// Floating Icons - From About Page
+// Floating Icons - Responsive positioning
 const topLeftCircle = {
   position: 'absolute',
-  top: '120px',
-  left: '80px',
-  width: '70px',
-  height: '70px',
+  top: 'clamp(80px, 12vw, 120px)',
+  left: 'clamp(20px, 8vw, 80px)',
+  width: 'clamp(50px, 8vw, 70px)',
+  height: 'clamp(50px, 8vw, 70px)',
   backgroundColor: 'rgba(30, 58, 75, 0.8)',
   borderRadius: '50%',
   display: 'flex',
@@ -265,6 +327,9 @@ const topLeftCircle = {
   justifyContent: 'center',
   zIndex: 1,
   border: '2px solid rgba(255, 255, 255, 0.1)',
+  '@media (max-width: 768px)': {
+    display: 'none'
+  }
 };
 
 const innerRedDots = {
@@ -277,8 +342,8 @@ const redDot1 = {
   position: 'absolute',
   top: '0',
   left: '0',
-  width: '8px',
-  height: '8px',
+  width: 'clamp(6px, 1.5vw, 8px)',
+  height: 'clamp(6px, 1.5vw, 8px)',
   backgroundColor: '#ef4444',
   borderRadius: '50%',
 };
@@ -287,18 +352,18 @@ const redDot2 = {
   position: 'absolute',
   top: '0',
   right: '0',
-  width: '8px',
-  height: '8px',
+  width: 'clamp(6px, 1.5vw, 8px)',
+  height: 'clamp(6px, 1.5vw, 8px)',
   backgroundColor: '#ef4444',
   borderRadius: '50%',
 };
 
 const leftBlueSquare = {
   position: 'absolute',
-  top: '250px',
-  left: '200px',
-  width: '60px',
-  height: '60px',
+  top: 'clamp(180px, 25vw, 250px)',
+  left: 'clamp(50px, 20vw, 200px)',
+  width: 'clamp(45px, 7vw, 60px)',
+  height: 'clamp(45px, 7vw, 60px)',
   backgroundColor: 'rgba(59, 130, 246, 0.8)',
   borderRadius: '50%',
   display: 'flex',
@@ -306,6 +371,9 @@ const leftBlueSquare = {
   justifyContent: 'center',
   zIndex: 1,
   border: '2px solid rgba(255, 255, 255, 0.1)',
+  '@media (max-width: 768px)': {
+    display: 'none'
+  }
 };
 
 const blueSquareIcon = {
@@ -317,10 +385,10 @@ const blueSquareIcon = {
 
 const rightBlueTriangle = {
   position: 'absolute',
-  top: '180px',
-  right: '150px',
-  width: '65px',
-  height: '65px',
+  top: 'clamp(120px, 18vw, 180px)',
+  right: 'clamp(50px, 15vw, 150px)',
+  width: 'clamp(50px, 8vw, 65px)',
+  height: 'clamp(50px, 8vw, 65px)',
   backgroundColor: 'rgba(59, 130, 246, 0.8)',
   borderRadius: '50%',
   display: 'flex',
@@ -328,6 +396,9 @@ const rightBlueTriangle = {
   justifyContent: 'center',
   zIndex: 1,
   border: '2px solid rgba(255, 255, 255, 0.1)',
+  '@media (max-width: 768px)': {
+    display: 'none'
+  }
 };
 
 const triangleIcon = {
@@ -340,10 +411,10 @@ const triangleIcon = {
 
 const topRightYellowCircle = {
   position: 'absolute',
-  top: '100px',
-  right: '80px',
-  width: '70px',
-  height: '70px',
+  top: 'clamp(70px, 10vw, 100px)',
+  right: 'clamp(20px, 8vw, 80px)',
+  width: 'clamp(50px, 8vw, 70px)',
+  height: 'clamp(50px, 8vw, 70px)',
   backgroundColor: 'rgba(245, 158, 11, 0.8)',
   borderRadius: '50%',
   display: 'flex',
@@ -351,18 +422,21 @@ const topRightYellowCircle = {
   justifyContent: 'center',
   zIndex: 1,
   border: '2px solid rgba(255, 255, 255, 0.1)',
+  '@media (max-width: 768px)': {
+    display: 'none'
+  }
 };
 
 const yellowIcon = {
   color: '#ffffff',
-  fontSize: '24px',
+  fontSize: 'clamp(18px, 3vw, 24px)',
   fontWeight: 'bold',
 };
 
 // Common Section Styles
 const sectionStyles = {
   background: 'linear-gradient(180deg, #173b4c 0%, #0a2e3f 100%)',
-  padding: '80px 0',
+  padding: 'clamp(40px, 10vw, 80px) 0',
   color: 'white',
   fontFamily: 'Segoe UI, sans-serif'
 };
@@ -370,38 +444,51 @@ const sectionStyles = {
 const containerStyles = {
   maxWidth: '1200px',
   margin: '0 auto',
-  padding: '0 20px'
+  padding: '0 clamp(15px, 3vw, 20px)'
 };
 
 const titleStyles = {
-  fontSize: '2rem',
+  fontSize: 'clamp(1.5rem, 4vw, 2rem)',
   fontWeight: '700',
   marginBottom: '20px',
 };
 
-// SEO Styles
+// SEO & Content Marketing Styles (Text Left, Image Right)
 const contentGridStyles = {
   display: 'flex',
   flexWrap: 'wrap',
-  gap: '40px',
+  gap: 'clamp(20px, 5vw, 40px)',
   justifyContent: 'center',
   alignItems: 'center',
-  marginBottom: '40px'
+  marginBottom: 'clamp(20px, 5vw, 40px)',
+  '@media (max-width: 768px)': {
+    flexDirection: 'column'
+  }
 };
 
-
 const textContentStyles = {
-  paddingRight: '20px'
+  flex: '1 1 500px',
+  paddingRight: 'clamp(0px, 3vw, 20px)',
+  '@media (max-width: 768px)': {
+    order: 2,
+    paddingRight: 0,
+    textAlign: 'center'
+  }
 };
 
 const descriptionStyles = {
-  fontSize: '1rem',
+  fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
   lineHeight: '1.8',
   color: 'white'
 };
 
 const imageContainerStyles = {
-  textAlign: 'center'
+  flex: '1 1 400px',
+  textAlign: 'center',
+  '@media (max-width: 768px)': {
+    order: 1,
+    marginBottom: '20px'
+  }
 };
 
 const imageStyles = {
@@ -413,13 +500,13 @@ const imageStyles = {
 
 const perksContainerStyles = {
   backgroundColor: 'rgba(255, 255, 255, 0.1)',
-  padding: '30px',
+  padding: 'clamp(20px, 4vw, 30px)',
   borderRadius: '10px',
   textAlign: 'left'
 };
 
 const perksHeaderStyles = {
-  fontSize: '1.5rem',
+  fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
   fontWeight: '700',
   marginBottom: '20px',
   textAlign: 'center'
@@ -427,26 +514,38 @@ const perksHeaderStyles = {
 
 const perksListStyles = {
   listStyle: 'disc',
-  paddingLeft: '40px',
+  paddingLeft: 'clamp(20px, 5vw, 40px)',
   color: 'white',
-  lineHeight: '2'
+  lineHeight: '2',
+  '@media (max-width: 768px)': {
+    paddingLeft: '20px'
+  }
 };
 
 const perkItemStyles = {
-  fontSize: '1rem'
+  fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
 };
 
-// Social Media Styles
+// Social Media & Web Development Styles (Image Left, Text Right)
 const contentGridStylesReverse = {
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '40px'
+  gap: 'clamp(20px, 5vw, 40px)',
+  marginBottom: 'clamp(20px, 5vw, 40px)',
+  '@media (max-width: 768px)': {
+    flexDirection: 'column'
+  }
 };
 
 const imageContainerStylesSM = {
-  flex: '0 0 400px'
+  flex: '1 1 400px',
+  order: 1,
+  '@media (max-width: 768px)': {
+    order: 1,
+    marginBottom: '20px'
+  }
 };
 
 const imageStylesSM = {
@@ -457,16 +556,23 @@ const imageStylesSM = {
 };
 
 const textContentStylesSM = {
-  flex: '1',
-  textAlign: 'left'
+  flex: '1 1 500px',
+  textAlign: 'left',
+  order: 2,
+  paddingLeft: 'clamp(0px, 3vw, 20px)',
+  '@media (max-width: 768px)': {
+    order: 2,
+    paddingLeft: 0,
+    textAlign: 'center'
+  }
 };
 
 const perksBoxStyles = {
   backgroundColor: 'rgba(255,255,255,0.05)',
   border: '1px solid rgba(255,255,255,0.1)',
   borderRadius: '10px',
-  padding: '40px 30px',
-  marginTop: '50px',
+  padding: 'clamp(20px, 5vw, 40px) clamp(20px, 4vw, 30px)',
+  marginTop: '20px',
   textAlign: 'left'
 };
 
@@ -474,75 +580,88 @@ const perksBoxStyles = {
 const perksBoxStylesCM = {
   backgroundColor: '#23566c',
   borderRadius: '8px',
-  padding: '30px',
+  padding: 'clamp(20px, 4vw, 30px)',
   boxShadow: '0 5px 15px rgba(0,0,0,0.2)'
 };
 
 // Web Development Styles
-const contentRowStyles = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '30px',
-  marginBottom: '50px',
-};
-
-
 const imageContainerStylesWeb = {
-  flex: '1 1 45%',
+  flex: '1 1 400px',
   textAlign: 'center',
+  order: 1,
+  '@media (max-width: 768px)': {
+    order: 1,
+    marginBottom: '20px'
+  }
 };
 
 const imageStylesWeb = {
   width: '100%',
-  maxWidth: '500px',
+  maxWidth: '450px',
   height: 'auto',
   borderRadius: '12px',
 };
 
 const textBlockStyles = {
-  flex: '1 1 50%',
-  padding: '0 20px',
+  flex: '1 1 500px',
+  padding: '0 clamp(0px, 3vw, 20px)',
+  order: 2,
+  '@media (max-width: 768px)': {
+    order: 2,
+    padding: 0,
+    textAlign: 'center'
+  }
 };
 
 const perksBoxStylesWeb = {
   backgroundColor: '#23566c',
   borderRadius: '8px',
-  padding: '30px',
+  padding: 'clamp(20px, 4vw, 30px)',
   boxShadow: '0 5px 15px rgba(0,0,0,0.2)',
+  marginTop: '20px'
 };
 
-// PPC Styles
+// PPC Styles (Text Left, Image Right)
 const gridStyles = {
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
   alignItems: 'flex-start',
-  gap: '40px',
-  marginBottom: '40px'
+  gap: 'clamp(20px, 5vw, 40px)',
+  marginBottom: 'clamp(20px, 5vw, 40px)',
+  '@media (max-width: 768px)': {
+    flexDirection: 'column'
+  }
 };
 
 const textSection = {
   flex: '1 1 500px',
-  maxWidth: '600px'
+  maxWidth: '600px',
+  '@media (max-width: 768px)': {
+    order: 2,
+    textAlign: 'center'
+  }
 };
 
 const titleStyle = {
-  fontSize: '2rem',
+  fontSize: 'clamp(1.5rem, 4vw, 2rem)',
   fontWeight: 'bold',
   marginBottom: '20px'
 };
 
 const descriptionStyle = {
-  fontSize: '1rem',
+  fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
   lineHeight: '1.8',
   color: '#dfe6e9'
 };
 
 const imageContainer = {
   flex: '1 1 400px',
-  textAlign: 'center'
+  textAlign: 'center',
+  '@media (max-width: 768px)': {
+    order: 1,
+    marginBottom: '20px'
+  }
 };
 
 const imageStyle = {
@@ -555,14 +674,14 @@ const perksCard = {
   backgroundColor: 'rgba(255, 255, 255, 0.05)',
   border: '1px solid rgba(255, 255, 255, 0.2)',
   borderRadius: '10px',
-  padding: '30px 40px',
+  padding: 'clamp(20px, 4vw, 30px) clamp(25px, 5vw, 40px)',
   textAlign: 'center',
   margin: '0 auto',
   maxWidth: '600px'
 };
 
 const perksTitle = {
-  fontSize: '1.5rem',
+  fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
   fontWeight: 'bold',
   marginBottom: '20px',
   color: '#ffffff'
@@ -576,7 +695,7 @@ const perkList = {
 };
 
 const perkItem = {
-  fontSize: '1rem',
+  fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
   padding: '8px 0',
   color: '#dcdde1'
 };
@@ -586,6 +705,5 @@ const checkMark = {
   fontWeight: 'bold',
   marginRight: '10px'
 };
-
 
 export default ServicesPage;

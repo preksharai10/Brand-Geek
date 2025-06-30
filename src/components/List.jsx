@@ -5,23 +5,23 @@ const Services = () => {
   const services = [
     {
       title: "Search Engine Optimization",
-      icon: <FaSearch size={40} color="#4ade80" />, // Increased size
+      icon: <FaSearch size={40} color="#4ade80" />,
     },
     {
       title: "Social Media Marketing",
-      icon: <FaTwitter size={40} color="#4ade80" />, // Increased size
+      icon: <FaTwitter size={40} color="#4ade80" />,
     },
     {
       title: "Content Marketing",
-      icon: <FaRegFileAlt size={40} color="#4ade80" />, // Increased size
+      icon: <FaRegFileAlt size={40} color="#4ade80" />,
     },
     {
       title: "Website Design and Development Services",
-      icon: <FaLaptopCode size={40} color="#4ade80" />, // Increased size
+      icon: <FaLaptopCode size={40} color="#4ade80" />,
     },
     {
       title: "Pay-Per-Click Advertising",
-      icon: <FaPaperPlane size={40} color="#4ade80" />, // Increased size
+      icon: <FaPaperPlane size={40} color="#4ade80" />,
     }
   ];
 
@@ -40,6 +40,27 @@ const Services = () => {
           ))}
         </div>
       </div>
+
+      {/* Responsive styles */}
+      <style>{`
+        @media (max-width: 1024px) {
+          #services .servicesWrapper {
+            justify-content: center !important;
+            gap: 30px !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          #services .servicesWrapper {
+            flex-direction: column !important;
+            align-items: center !important;
+          }
+          #services .cardStyle {
+            width: 100% !important;
+            max-width: 320px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };
@@ -74,10 +95,13 @@ const underline = {
 
 const servicesWrapper = {
   display: 'flex',
-  justifyContent: 'space-between',
+  justifyContent: 'center',  
+  alignItems: 'center',
   gap: '20px',
-  flexWrap: 'nowrap'
+  flexWrap: 'wrap',
+  rowGap: '30px',
 };
+
 
 const cardStyle = {
   backgroundColor: 'rgba(255,255,255,0.05)',
@@ -86,9 +110,9 @@ const cardStyle = {
   border: '1px solid rgba(255,255,255,0.1)',
   transition: 'transform 0.3s ease',
   cursor: 'pointer',
-  flex: '1',
+  flex: '1 1 200px',
+  maxWidth: '220px',
   minWidth: '180px',
-  maxWidth: '220px'
 };
 
 const iconContainer = {

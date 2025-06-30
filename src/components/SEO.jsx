@@ -47,7 +47,7 @@ const SEO = () => {
 
 const sectionStyles = {
   background: 'linear-gradient(180deg, #173b4c 0%, #0a2e3f 100%)',
-  padding: '80px 0',
+  padding: '60px 0',
   color: 'white',
   fontFamily: 'Segoe UI, sans-serif'
 };
@@ -55,53 +55,69 @@ const sectionStyles = {
 const containerStyles = {
   maxWidth: '1200px',
   margin: '0 auto',
-  padding: '0 20px'
+  padding: '0 15px'
 };
 
 const titleStyles = {
-  fontSize: '2rem',
+  fontSize: 'clamp(1.5rem, 4vw, 2rem)',
   fontWeight: '700',
   marginBottom: '20px',
+  lineHeight: '1.2'
 };
 
 const contentGridStyles = {
   display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
-  gap: '50px',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+  gap: '30px',
   alignItems: 'center',
-  marginBottom: '40px'
+  marginBottom: '40px',
+  '@media (max-width: 768px)': {
+    gridTemplateColumns: '1fr',
+    gap: '20px'
+  }
 };
 
 const textContentStyles = {
-  paddingRight: '20px'
+  paddingRight: '0',
+  '@media (min-width: 769px)': {
+    paddingRight: '20px'
+  }
 };
 
 const descriptionStyles = {
-  fontSize: '1rem',
-  lineHeight: '1.8',
-  color: 'white'
+  fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
+  lineHeight: '1.7',
+  color: 'white',
+  textAlign: 'justify'
 };
 
 const imageContainerStyles = {
-  textAlign: 'center'
+  textAlign: 'center',
+  order: '1',
+  '@media (min-width: 769px)': {
+    order: '2'
+  }
 };
 
 const imageStyles = {
   width: '100%',
-  maxWidth: '450px',
+  maxWidth: '100%',
   height: 'auto',
-  borderRadius: '10px'
+  borderRadius: '10px',
+  '@media (min-width: 769px)': {
+    maxWidth: '450px'
+  }
 };
 
 const perksContainerStyles = {
   backgroundColor: 'rgba(255, 255, 255, 0.1)',
-  padding: '30px',
+  padding: 'clamp(20px, 4vw, 30px)',
   borderRadius: '10px',
   textAlign: 'left'
 };
 
 const perksHeaderStyles = {
-  fontSize: '1.5rem',
+  fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
   fontWeight: '700',
   marginBottom: '20px',
   textAlign: 'center'
@@ -109,13 +125,15 @@ const perksHeaderStyles = {
 
 const perksListStyles = {
   listStyle: 'disc',
-  paddingLeft: '40px',
+  paddingLeft: 'clamp(20px, 5vw, 40px)',
   color: 'white',
-  lineHeight: '2'
+  lineHeight: '1.8',
+  margin: '0'
 };
 
 const perkItemStyles = {
-  fontSize: '1rem'
+  fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
+  marginBottom: '8px'
 };
 
 export default SEO;
