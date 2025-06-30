@@ -193,12 +193,16 @@ const footerLinkStyles = {
 const backToTopWrapper = {
   position: 'fixed',
   bottom: '20px',
-  right: '20px'
+  right: '20px',
+  width: 'auto',
+  height: 'auto',
+  zIndex: 1001 
 };
+
 
 const backToTopButton = {
   backgroundColor: '#7fff00',
-  color: '#ffffff',
+  color: '#103330',
   border: 'none',
   borderRadius: '6px',
   width: '45px',
@@ -209,8 +213,9 @@ const backToTopButton = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  zIndex: 1000
+  zIndex: 1002
 };
+
 
 const fullWidthCopyright = {
   width: '100%',

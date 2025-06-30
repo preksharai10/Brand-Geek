@@ -60,11 +60,14 @@ const styles = {
   container: {
     maxWidth: '1200px',
     margin: '0 auto',
-    padding: '100px 20px 40px',
+    padding: '140px 20px 40px',
+    backgroundColor: '#ffffff',
     color: '#333333',
     lineHeight: 1.6,
-    fontSize: '1rem'
+    fontSize: '1rem',
+    minHeight: '100vh' 
   },
+
   heading: {
     fontSize: '2rem',
     fontWeight: 'bold',

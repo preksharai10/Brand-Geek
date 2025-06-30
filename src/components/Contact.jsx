@@ -10,7 +10,6 @@ const Contact = () => {
   return (
     <>
       {/* Top Section */}
-      
       <div style={topHeader}>
         {/* Floating Symbols */}
         <div style={topLeftCircle}>
@@ -115,6 +114,7 @@ const underline = {
 const mainSection = {
   backgroundColor: '#1c4a57',
   padding: '60px 20px 100px',
+  overflowX: 'hidden', // Prevent horizontal scroll from floating icons
 };
 
 const container = {
@@ -213,11 +213,11 @@ const submitButton = {
   marginTop: '10px'
 };
 
-// Floating Icons Styles
+// Floating Icons – UPDATED positions with viewport units
 const topLeftCircle = {
   position: 'absolute',
   top: '120px',
-  left: '80px',
+  left: '8vw',
   width: '70px',
   height: '70px',
   backgroundColor: 'rgba(30, 58, 75, 0.8)',
@@ -258,7 +258,7 @@ const redDot2 = {
 const leftBlueSquare = {
   position: 'absolute',
   top: '250px',
-  left: '200px',
+  left: '15vw',
   width: '60px',
   height: '60px',
   backgroundColor: 'rgba(59, 130, 246, 0.8)',
@@ -280,7 +280,7 @@ const blueSquareIcon = {
 const rightBlueTriangle = {
   position: 'absolute',
   top: '180px',
-  right: '150px',
+  right: '10vw',
   width: '65px',
   height: '65px',
   backgroundColor: 'rgba(59, 130, 246, 0.8)',
@@ -303,7 +303,7 @@ const triangleIcon = {
 const topRightYellowCircle = {
   position: 'absolute',
   top: '100px',
-  right: '80px',
+  right: '8vw',
   width: '70px',
   height: '70px',
   backgroundColor: 'rgba(245, 158, 11, 0.8)',
