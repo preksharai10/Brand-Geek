@@ -6,12 +6,12 @@ const TermsConditions = () => {
       <div style={pageStyle}>
         <h1 style={headingStyle}>Terms &amp; Conditions</h1>
         <p>
-          Welcome to BrandGeek! These Terms and Conditions (“Terms”) govern your access to and use of our website, products, and services (collectively, the “Services”). By using BrandGeek, you agree to comply with and be bound by these Terms. If you do not agree, please do not use our Services.
+          Welcome to Fusionfame Digital! These Terms and Conditions (“Terms”) govern your access to and use of our website, products, and services (collectively, the “Services”). By using Fusionfame Digital, you agree to comply with and be bound by these Terms. If you do not agree, please do not use our Services.
         </p>
 
         <h2 style={sectionHeading}>1. Who We Are</h2>
         <p>
-          BrandGeek (“we,” “us,” “our”) is a [describe nature of your business, e.g., branding consultancy/digital marketing/e‑commerce platform] committed to helping brands grow through innovative solutions.
+          Fusionfame Digital (“we,” “us,” “our”) is a [describe nature of your business, e.g., branding consultancy/digital marketing/e‑commerce platform] committed to helping brands grow through innovative solutions.
         </p>
 
         <h2 style={sectionHeading}>2. Eligibility</h2>
@@ -34,7 +34,7 @@ const TermsConditions = () => {
 
         <h2 style={sectionHeading}>5. Intellectual Property</h2>
         <p>
-          All content, trademarks, logos, and intellectual property displayed on our platform are owned by or licensed to BrandGeek. You may not use any of our intellectual property without prior written consent.
+          All content, trademarks, logos, and intellectual property displayed on our platform are owned by or licensed to Fusionfame Digital. You may not use any of our intellectual property without prior written consent.
         </p>
 
         <h2 style={sectionHeading}>6. Payment &amp; Billing</h2>
@@ -57,17 +57,17 @@ const TermsConditions = () => {
 
         <h2 style={sectionHeading}>9. Disclaimer of Warranties</h2>
         <p>
-          The Services are provided “as is” and “as available.” BrandGeek disclaims all warranties, express or implied, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.
+          The Services are provided “as is” and “as available.” Fusionfame Digital disclaims all warranties, express or implied, including but not limited to merchantability, fitness for a particular purpose, and non-infringement.
         </p>
 
         <h2 style={sectionHeading}>10. Limitation of Liability</h2>
         <p>
-          To the fullest extent permitted by law, BrandGeek shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of our Services.
+          To the fullest extent permitted by law, Fusionfame Digital shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of our Services.
         </p>
 
         <h2 style={sectionHeading}>11. Indemnification</h2>
         <p>
-          You agree to indemnify and hold harmless BrandGeek and its affiliates from any claims, losses, or damages arising out of your use of the Services or your violation of these Terms.
+          You agree to indemnify and hold harmless Fusionfame Digital and its affiliates from any claims, losses, or damages arising out of your use of the Services or your violation of these Terms.
         </p>
 
         <h2 style={sectionHeading}>12. Governing Law</h2>
@@ -82,7 +82,7 @@ const TermsConditions = () => {
 
         <h2 style={sectionHeading}>14. Contact Us</h2>
         <p>
-          For any questions or concerns, contact us at: Email: info@brand-geek.com
+          For any questions or concerns, contact us at: Email: support@fusionfamedigital.io
         </p>
       </div>
     </div>

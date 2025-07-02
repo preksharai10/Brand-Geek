@@ -24,7 +24,7 @@ const CookieNotice = () => {
           You have the right to decide whether to accept or reject cookies. You can exercise your cookie rights by setting your preferences in your browser settings.
         </p>
         <p style={paragraphStyle}>
-          If you have questions, email <strong>info@brand-geek.com</strong>.
+          If you have questions, email <strong>support@fusionfamedigital.io</strong>.
         </p>
 
         <h3 style={subHeadingStyle}>We use:</h3>

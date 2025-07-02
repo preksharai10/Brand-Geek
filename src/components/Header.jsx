@@ -19,24 +19,14 @@ const Header = () => {
   return (
     <header style={headerStyles}>
       <div style={containerStyles}>
-        {/* Logo & Title */}
+        {/* Clickable Site Title */}
         <div style={logoStyles}>
-          <div style={logoIconStyles}>
-            <img
-              src="/logo.png"
-              alt="Fusionfame Logo"
-              style={{
-                width: '40px',
-                height: '40px',
-                objectFit: 'contain',
-                borderRadius: '0'
-              }}
-            />
-          </div>
-          <h2 style={logoTextStyles}>
-            <span style={{ color: '#4ade80' }}>Fusionfame</span>{' '}
-            <span style={{ color: 'white' }}>Digital</span>
-          </h2>
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <h2 style={logoTextStyles}>
+              <span style={{ color: '#4ade80' }}>Fusionfame</span>{' '}
+              <span style={{ color: 'white' }}>Digital</span>
+            </h2>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -70,7 +60,7 @@ const Header = () => {
   );
 };
 
-// ---------------------- STYLES ----------------------
+// ----------- STYLES (same as before) -----------
 
 const headerStyles = {
   background: '#00555A',
@@ -100,15 +90,7 @@ const logoStyles = {
   display: 'flex',
   alignItems: 'center',
   gap: '12px',
-  minWidth: 0,
   flex: '1 1 auto'
-};
-
-const logoIconStyles = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  flexShrink: 0
 };
 
 const logoTextStyles = {
@@ -195,7 +177,7 @@ const mobileNavLinkStyles = {
   transition: 'color 0.3s ease'
 };
 
-// ---------------------- RESPONSIVE STYLES ----------------------
+// ------------- RESPONSIVE STYLES -------------
 
 if (typeof document !== 'undefined') {
   const style = document.createElement('style');
@@ -217,11 +199,6 @@ if (typeof document !== 'undefined') {
 
       h2[style*="fontSize"] {
         font-size: 1.2rem !important;
-      }
-
-      img {
-        width: 28px !important;
-        height: 28px !important;
       }
     }
 

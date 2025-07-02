@@ -99,7 +99,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div style={footerSectionStyles}>
             <h4 style={footerSubtitleStyles}>Contact Info</h4>
-            <p style={footerTextStyles}><strong>Contact No.:</strong>   <br/> +1-833-(860) 0046 <br/> +91-7388889112</p>
+            <p style={footerTextStyles}><strong>Contact No.:</strong>   <br/> +1-833-(860) 0046 <br/> +91-8851467094</p>
             
             <p style={footerTextStyles}><strong>Email:</strong> support@fusionfamedigital.io</p>
             <p style={footerTextStyles}><strong>Address:</strong><br />

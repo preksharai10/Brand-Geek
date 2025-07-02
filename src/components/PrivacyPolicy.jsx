@@ -5,9 +5,9 @@ const PrivacyPolicy = () => {
     <div style={styles.container}>
       <h1 style={styles.heading}>Privacy Policy</h1>
       <p>
-        At <strong>BrandGeek</strong>, your privacy is a priority. This Privacy Policy outlines how we collect,
+        At <strong>Fusionfame Digital</strong>, your privacy is a priority. This Privacy Policy outlines how we collect,
         use, disclose, and safeguard your information when you visit our website, use our services, or interact
-        with us in any way. By using BrandGeek, you agree to the terms of this policy.
+        with us in any way. By using Fusionfame Digital, you agree to the terms of this policy.
       </p>
 
       <h2 style={styles.subheading}>1. Information We Collect</h2>
@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
       <p>We may update this policy from time to time. Any changes will be posted on this page.</p>
 
       <h2 style={styles.subheading}>6. Contact Us</h2>
-      <p>If you have any questions or concerns, contact us at <strong>info@brand-geek.com</strong>.</p>
+      <p>If you have any questions or concerns, contact us at <strong>support@fusionfamedigital.io</strong>.</p>
     </div>
   );
 };

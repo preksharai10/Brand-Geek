@@ -6,7 +6,7 @@ const RefundPolicy = () => {
       <div style={pageStyle}>
         <h1 style={headingStyle}>Refund and Returns Policy</h1>
         <p>
-          At <strong>BrandGeek</strong>, we stand behind the quality of our products and your satisfaction is our top priority.
+          At <strong>Fusionfame Digital</strong>, we stand behind the quality of our products and your satisfaction is our top priority.
           If something isn’t quite right, we’re here to make it right.
         </p>
 
@@ -33,12 +33,12 @@ const RefundPolicy = () => {
 
         <h2 style={sectionHeading}>Exchanges</h2>
         <p>
-          We only replace items if they are defective or damaged. If you need to exchange it for the same item, please contact us at info@brand-geek.com.
+          We only replace items if they are defective or damaged. If you need to exchange it for the same item, please contact us at support@fusionfamedigital.io.
         </p>
 
         <h2 style={sectionHeading}>Shipping Returns</h2>
         <p>
-          To return your product, you should mail it to: 2142 Mayo Street, Williamstown, KY 41097, United States.
+          To return your product, you should mail it to: #336, Tower A On 3rd Floor Spaze I-tech Park, Gurgaon, Haryana, India, 122018.
         </p>
         <p>
           You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable.
