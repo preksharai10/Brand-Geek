@@ -7,10 +7,9 @@ const Header = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top on route change
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location]);
 
   const getLinkStyle = (path) => (
@@ -20,19 +19,27 @@ const Header = () => {
   return (
     <header style={headerStyles}>
       <div style={containerStyles}>
-        {/* Logo */}
+        {/* Logo & Title */}
         <div style={logoStyles}>
           <div style={logoIconStyles}>
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="16" fill="#4ade80" />
-              <path d="M12 10h8c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2h-8c-1.1 0-2-.9-2-2v-8c0-1.1.9-2 2-2z" fill="white" />
-              <circle cx="16" cy="16" r="3" fill="#4ade80" />
-            </svg>
+            <img
+              src="/logo.png"
+              alt="Fusionfame Logo"
+              style={{
+                width: '40px',
+                height: '40px',
+                objectFit: 'contain',
+                borderRadius: '0'
+              }}
+            />
           </div>
-          <h2 style={logoTextStyles}>Brand Geek</h2>
+          <h2 style={logoTextStyles}>
+            <span style={{ color: '#4ade80' }}>Fusionfame</span>{' '}
+            <span style={{ color: 'white' }}>Digital</span>
+          </h2>
         </div>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <nav style={navStyles} className="nav-desktop">
           <ul style={navListStyles}>
             <li><Link to="/" style={getLinkStyle('/')}>Home</Link></li>
@@ -49,7 +56,7 @@ const Header = () => {
           <div style={hamburgerStyles}></div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div style={mobileMenuStyles}>
             <Link to="/" style={mobileNavLinkStyles}>Home</Link>
@@ -63,7 +70,7 @@ const Header = () => {
   );
 };
 
-// ---------------- STYLES ----------------
+// ---------------------- STYLES ----------------------
 
 const headerStyles = {
   background: '#00555A',
@@ -92,8 +99,8 @@ const containerStyles = {
 const logoStyles = {
   display: 'flex',
   alignItems: 'center',
-  gap: '8px',
-  minWidth: 0, // Allow flex shrinking
+  gap: '12px',
+  minWidth: 0,
   flex: '1 1 auto'
 };
 
@@ -105,13 +112,15 @@ const logoIconStyles = {
 };
 
 const logoTextStyles = {
-  fontSize: '1.3rem',
+  fontSize: '1.6rem',
   fontWeight: '700',
-  color: 'white',
   margin: 0,
   whiteSpace: 'nowrap',
   overflow: 'hidden',
-  textOverflow: 'ellipsis'
+  textOverflow: 'ellipsis',
+  display: 'flex',
+  alignItems: 'center',
+  gap: '4px',
 };
 
 const navStyles = {
@@ -186,7 +195,8 @@ const mobileNavLinkStyles = {
   transition: 'color 0.3s ease'
 };
 
-// ------------- Inject Responsive CSS -------------
+// ---------------------- RESPONSIVE STYLES ----------------------
+
 if (typeof document !== 'undefined') {
   const style = document.createElement('style');
   style.textContent = `
@@ -204,14 +214,14 @@ if (typeof document !== 'undefined') {
       header div[style*="maxWidth"] {
         padding: 0 12px !important;
       }
-      
+
       h2[style*="fontSize"] {
-        font-size: 1.1rem !important;
+        font-size: 1.2rem !important;
       }
-      
-      svg {
-        width: 24px !important;
-        height: 24px !important;
+
+      img {
+        width: 28px !important;
+        height: 28px !important;
       }
     }
 
@@ -219,9 +229,9 @@ if (typeof document !== 'undefined') {
       h2[style*="fontSize"] {
         font-size: 1rem !important;
       }
-      
-      header div[style*="gap: 8px"] {
-        gap: 6px !important;
+
+      header div[style*="gap: 12px"] {
+        gap: 8px !important;
       }
     }
 

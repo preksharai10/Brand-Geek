@@ -99,14 +99,14 @@ const Footer = () => {
           {/* Contact Info */}
           <div style={footerSectionStyles}>
             <h4 style={footerSubtitleStyles}>Contact Info</h4>
-            <p style={footerTextStyles}><strong>Email:</strong> info@brand-geek.com</p>
+            <p style={footerTextStyles}><strong>Contact No.:</strong>   <br/> +1-833-(860) 0046 <br/> +91-7388889112</p>
+            
+            <p style={footerTextStyles}><strong>Email:</strong> support@fusionfamedigital.io</p>
             <p style={footerTextStyles}><strong>Address:</strong><br />
-              Street: 2142 Mayo Street<br />
-              City: Williamstown<br />
-              State/province/area: Kentucky<br />
-              Zip code: 41097<br />
-              Country calling code: +1<br />
-              Country: United States
+              #336, Tower A On 3rd Floor <br />
+              Spaze I-tech Park,<br />
+              Gurgaon, Haryana,<br />
+              India, 122018
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ const Footer = () => {
 
       {/* Full-width copyright bar */}
       <div style={fullWidthCopyright}>
-        <p>Copyright © 2025 Brand Geek.</p>
+        <p>Copyright © 2025 Fusionfame Digital Private Limited.</p>
       </div>
     </footer>
   );

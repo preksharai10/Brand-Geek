@@ -6,7 +6,7 @@ const CookieNotice = () => {
       <div style={pageStyle}>
         <h1 style={headingStyle}>Cookie Notice</h1>
         <p style={paragraphStyle}>
-          This Cookie Notice explains how Brand Geek uses cookies and similar technologies to recognize you when you visit our website.
+          This Cookie Notice explains how Fusionfame Digital uses cookies and similar technologies to recognize you when you visit our website.
         </p>
 
         <h2 style={subHeadingStyle}>What are cookies?</h2>

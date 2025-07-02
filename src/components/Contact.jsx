@@ -39,7 +39,7 @@ const Contact = () => {
           <div style={mapContainer}>
             <iframe
               title="Google Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14195.842962278444!2d-81.49111432673988!3d28.63114694872039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e779b4b20c6477%3A0x7a27693b32816b9e!2s4309%20Dovetail%20Dr%2C%20Orlando%2C%20FL%2032878%2C%20USA!5e0!3m2!1sen!2sin!4v1719680882076!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1907706389607!2d77.03895907549283!3d28.413499975784987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d229a505aac81%3A0xe1b7e50b7bd2c936!2sSpaze%20i-Tech%20Park!5e0!3m2!1sen!2sin!4v1751437497220!5m2!1sen!2sin" 
               width="100%"
               height="100%"
               style={{ border: 0, borderRadius: '6px' }}
